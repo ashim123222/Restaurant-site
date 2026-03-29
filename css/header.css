@@ -1,0 +1,110 @@
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  transition: 0.5s ease;
+  z-index: 9999;
+  position: sticky;
+  top: 0px;
+}
+header.shrunk {
+  position: sticky;
+  top: 0px;
+  background-color: var(--glass-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  animation: head 0.5s ease;
+}
+@keyframes head {
+  from {
+    transform: translateY(-80px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+header.shrunk nav {
+  gap: 1vw;
+}
+
+.logo {
+  font-size: 2.5rem;
+  position: relative;
+  -webkit-text-stroke: 1px var(--gold);
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 2px rgb(102, 48, 0),
+    1px 1px 2px rgb(26, 20, 5);
+  color: var(--gold);
+  font-family: "Gravitas One", serif;
+}
+.logo b {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  -webkit-text-stroke: 1px var(--text-name);
+  -webkit-text-fill-color: var(--gold);
+  font-size: 1.9rem;
+  font-family: fantasy;
+  font-weight: 900;
+}
+.header-btns {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav {
+  display: flex;
+  /* gap: 20px; */
+}
+nav a {
+  text-transform: uppercase;
+  padding: 10px 20px;
+  color: var(--text-white);
+  border-radius: 5px;
+  position: relative;
+  transition: 0.4s linear;
+  font-weight: 200;
+  letter-spacing: 1px;
+  corner-shape: scoop;
+}
+.mode svg {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  /* border: 1px solid var(--border); */
+  padding: 7px;
+  background: var(--bg-main);
+}
+.mode {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  width: fit-content;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+header.shrunk nav a {
+  color: var(--text-name);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  font-weight: 400;
+}
+header.shrunk nav a.active,
+header.shrunk nav a:hover {
+  border-top: 1px solid var(--border-hover);
+  border-bottom: 1px solid var(--border-hover);
+  color: var(--gold);
+  background: var(--land-bg);
+}

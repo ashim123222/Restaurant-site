@@ -1,0 +1,115 @@
+section#home {
+  height: 100vh;
+  margin-top: -70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: left;
+  background-size: 110%;
+  position: relative;
+  z-index: 0;
+  /* overflow: hidden; */
+}
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 120%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+section#home .img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+
+}
+.img img {
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.contain {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh;
+  background: var(--bg-trans-black);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+}
+.estd {
+  color: var(--gold) !important;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+  font-size: 14px !important;
+  letter-spacing: 4px !important;
+  font-family: "Inter", sans-serif;
+}
+.brand {
+  font-size: 6rem;
+  letter-spacing: 4px;
+  font-family: "Playfair Display", serif;
+  text-shadow: 2px 2px 4px var(--shadow-white), 4px 1px 2px var(--border);
+  -webkit-text-stroke: 1px var(--text-white);
+  -webkit-text-fill-color: transparent;
+}
+section#home p {
+  font-size: 18px;
+  font-weight: 150;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  color: var(--text-white);
+  text-align: center;
+  /* font-family: "Inter", sans-serif; */
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  bottom: 5vh;
+}
+.links a {
+  padding: 15px 30px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.75);
+  backdrop-filter: blur(20px);
+  text-transform: uppercase;
+  font-weight: 450;
+}
+.links a:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+.table {
+  color: var(--text-white);
+  background: rgba(111, 3, 3, 0.466);
+  border: 1px solid red;
+}
+.menu {
+  color: gold;
+  background: rgba(255, 255, 255, 0.086);
+  border: 1px solid var(--gold);
+}
+.menu:hover {
+  color: white;
+  background: var(--gold);
+}
+.table:hover {
+  background: rgb(173, 7, 7);
+}

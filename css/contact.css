@@ -1,0 +1,187 @@
+/* contact section ================================================= */
+
+section#contact {
+  padding: 70px 7%;
+  background: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vw;
+}
+section#contact * {
+  color: var(--text-white);
+}
+.contact h3.heading {
+  color: var(--text-white);
+}
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 4vw;
+}
+.container > * {
+  flex: 1;
+}
+.reach {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+.reach h1 {
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-weight: 550;
+  font-family: "Playfair Display", serif;
+}
+.reach > * {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reach p {
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+.reach > * div,
+.reach > * a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: fit-content;
+}
+.reach h5 {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--gold) !important;
+}
+.reach i {
+  color: var(--gold) !important;
+  font-size: 30px;
+}
+.reach > * div * {
+  font-size: 15px;
+}
+
+.reach a:hover,
+.reach a:hover p {
+  color: var(--gold) !important;
+}
+
+.reserve {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  /* justify-content: space-between; */
+  gap: 30px;
+  align-items: center;
+  padding: 50px;
+  border: 1px solid rgba(128, 127, 127, 0.197);
+  background: rgba(55, 55, 55, 0.147);
+  border-radius: 30px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.314);
+}
+.reserve h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+/* ===== FORM BASE ===== */
+form {
+  width: 100%;
+}
+
+form div, form div div {
+  position: relative;
+  margin: 15px 0;
+}
+
+/* two column layout */
+.second {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+}
+
+.second > div {
+  flex: 1;
+}
+
+/* ===== INPUT / SELECT / TEXTAREA ===== */
+input,
+select,
+textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.182);
+  outline: none;
+  padding: 12px 5px;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* textarea height */
+textarea {
+  resize: none;
+  height: 80px;
+}
+option {
+  background-color: var(--bg-dark);
+}
+
+/* ===== LABEL ===== */
+label {
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  opacity: 0.4;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* ===== FOCUS EFFECT ===== */
+input:focus,
+select:focus,
+textarea:focus {
+  border-bottom: 1px solid var(--gold); /* gold */
+}
+input.active, textarea.active, select.active {
+  border-bottom: 1px solid var(--gold);
+}
+/* floating label on focus or valid */
+label.active, .act-lab {
+  top: -16px;
+  color: var(--gold) !important;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 1;
+}
+
+
+/* ===== BUTTON ===== */
+form button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold) !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+form button:hover {
+  background: var(--gold);
+  color: #000 !important;
+  font-weight: 550;
+}

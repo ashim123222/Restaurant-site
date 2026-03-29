@@ -1,0 +1,453 @@
+section#about {
+  padding: 70px 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vw;
+  background: var(--bg-secondary);
+  position: relative;
+}
+.top {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 4vw;
+  /* align-items: center; */
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 30px 0;
+}
+
+h1.name {
+  font-size: 14px;
+  padding-left: 12px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  width: fit-content;
+  color: var(--text-name);
+}
+h1.name::before {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 12px;
+  height: 1px;
+  width: 150%;
+  background: linear-gradient(90deg, var(--border), var(--gold), transparent);
+  border-radius: 10px;
+}
+.welcome {
+  font-weight: 550;
+  font-size: 15px;
+  color: var(--gold);
+}
+.heading {
+  font-size: 45px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  font-family: "Playfair Display", serif;
+  text-transform: capitalize;
+}
+.detail {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  font-weight: 350;
+}
+.right {
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 20px var(--shadow);
+  border-radius: 20px;
+}
+
+.right img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 4vw;
+}
+.cards .card {
+  padding: 30px;
+  border: 1px solid var(--bg-main);
+  background: var(--bg-main);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  justify-content: center;
+}
+.card img {
+  height: 40px;
+}
+.card h1 {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Playfair Display", serif;
+}
+.card p {
+  font-size: 16px;
+  font-weight: 350;
+}
+.card:hover {
+  border: 1px solid var(--shadow-text);
+  transform: translateY(-5px);
+}
+.card:hover h1 {
+  color: var(--gold);
+}
+
+/* service section  styling  ======================= */
+h1.topic {
+  text-transform: uppercase;
+  position: sticky;
+  top: 70px;
+  backdrop-filter: blur(10px);
+  padding: 2px 7px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  z-index: 999;
+}
+h1.topic::before {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 1px;
+  background: var(--gold);
+  background-size: cover;
+  animation: yes linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 90%;
+}
+@keyframes yes {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  90% {
+    opacity: 0.7;
+    width: 100%;
+  }
+  100% {
+    width: 150%;
+    opacity: 1;
+    background: var(--gold);
+  }
+}
+
+section.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 4vw;
+  padding: 70px 12%;
+  background: var(--bg-main);
+}
+.full-menu {
+  padding: 15px 25px;
+  font-size: 16px;
+  background: var(--gold) !important;
+  color: rgb(102, 45, 0) !important;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px var(--shadow);
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+}
+.service-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3vw;
+}
+.card-dish {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 30vw;
+  border-radius: 30px;
+  transition: all 0.5s linear;
+  padding: 20px;
+  box-shadow: 0 0px 40px var(--shadow);
+}
+.land {
+  background: linear-gradient(var(--land-bg), var(--bg-secondary));
+  border: 1px solid var(--land-bg);
+}
+.land .sub {
+  border-bottom: 1px dashed var(--land-bg);
+}
+.land .sub h1,
+.land .price,
+.land .price span {
+  color: var(--land-heading);
+}
+.land .sub p {
+  color: var(--land-subtext);
+  font-family: "Inter", sans-serif;
+}
+.land p {
+  color: var(--land-text);
+}
+.land a {
+  /* border: 1px solid var(--land-bg); */
+  color: var(--land-heading);
+  background: linear-gradient(90deg, var(--land-bg), var(--bg-secondary));
+  box-shadow: 0 0 10px var(--shadow);
+}
+.land a:hover::before,
+.land a:hover::after {
+  background: var(--land-subtext);
+}
+
+.sea {
+  border: 1px solid var(--sea-bg);
+  background: linear-gradient(var(--sea-bg), var(--bg-secondary));
+}
+.sea .sub {
+  border-bottom: 1px dashed var(--sea-bg);
+}
+.sea .sub h1,
+.sea .price,
+.sea .price span {
+  color: var(--sea-heading);
+}
+.sea .sub p {
+  color: var(--sea-subtext);
+}
+.sea p {
+  color: var(--sea-text);
+}
+.sea a {
+  /* border: 1px solid var(--sea-bg); */
+  color: var(--sea-heading);
+  background: linear-gradient(90deg, var(--sea-bg), var(--bg-secondary));
+  box-shadow: 0 0 10px var(--shadow);
+}
+.sea a:hover::before,
+.sea a:hover::after {
+  background: var(--sea-subtext);
+}
+
+.garden {
+  border: 1px solid var(--garden-bg);
+  background: linear-gradient(var(--garden-bg), var(--bg-secondary));
+}
+.garden .sub {
+  border-bottom: 1px dashed var(--garden-bg);
+}
+.garden .sub h1,
+.garden .price,
+.garden .price span {
+  color: var(--garden-heading);
+}
+.garden .sub p {
+  color: var(--garden-subtext);
+}
+.garden p {
+  color: var(--garden-text);
+}
+.garden a {
+  /* border: 1px solid var(--garden-bg); */
+  color: var(--garden-heading);
+  background: linear-gradient(90deg, var(--garden-bg), var(--bg-secondary));
+  box-shadow: 0 0 10px var(--shadow);
+}
+
+.garden a:hover::before,
+.garden a:hover::after {
+  background: var(--garden-subtext);
+}
+
+.drink {
+  border: 1px solid var(--drink-bg);
+  background: linear-gradient(var(--drink-bg), var(--bg-secondary));
+}
+.drink .sub {
+  border-bottom: 1px dashed var(--drink-bg);
+}
+.drink .sub h1,
+.drink .price,
+.drink .price span {
+  color: var(--drink-heading);
+}
+.drink .sub p {
+  color: var(--drink-subtext);
+}
+.drink p {
+  color: var(--drink-text);
+}
+.drink a {
+  color: var(--drink-heading);
+  /* border: 1px solid var(--drink-bg); */
+  background: linear-gradient(90deg, var(--drink-bg), var(--bg-secondary));
+  box-shadow: 0 0 10px var(--shadow);
+}
+.drink a:hover::before,
+.drink a:hover::after {
+  background: var(--drink-subtext);
+}
+
+.card-dish .img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.card-dish img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s linear;
+}
+
+.sub {
+  padding: 10px 0;
+}
+
+.sub h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.card-dish p {
+  font-size: 16px;
+}
+.sub p {
+  font-size: 14px;
+  font-weight: 300;
+}
+.dish-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 1rem;
+  z-index: 99;
+}
+.dish-detail .dish-det {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: -15px;
+}
+.price,
+.price span {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.card-dish a {
+  padding: 10px 15px;
+  width: fit-content;
+  position: relative;
+  transition: all 0.5s ease;
+  z-index: 999;
+  border-radius: 30px;
+  /* color: var(--text-white); */
+}
+.card-dish a::before,
+.card-dish a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 100%;
+  width: 0%;
+  border-radius: 50%;
+  filter: blur(5px);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+.card-dish a:hover::before,
+.card-dish a:hover::after {
+  filter: blur(0px);
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  border-radius: 30px;
+}
+.card-dish a:hover::after {
+  filter: blur(20px);
+  opacity: 0.4;
+}
+.card-dish a:hover {
+  color: var(--text-white);
+}
+
+.card-dish:hover {
+  box-shadow: 0px 0 20px var(--shadow);
+}
+.card-dish:hover img {
+  transform: scale(1.09);
+}
+
+/* gallery section========================================================== */
+
+section#gallery {
+  padding: 70px 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vw;
+  background: var(--bg-secondary);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 16px;
+}
+.gallery .image {
+  flex-grow: 1;
+  position: relative;
+  width: 280px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px var(--shadow);
+}
+/* .main-img {
+  height: 400px;
+  width: 40vw;
+} */
+
+.image img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  object-fit: cover;
+  transition: all 0.5s linear;
+}
+
+.image img:hover {
+  transform: scale(1.1) rotate(2deg);
+}
