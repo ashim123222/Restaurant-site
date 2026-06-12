@@ -2,7 +2,7 @@ const header = document.getElementsByTagName("header")[0];
 const body = document.getElementsByTagName("body")[0];
 
 document.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
+  if (window.scrollY > 100) {
     header.classList.add("shrunk");
   } else {
     header.classList.remove("shrunk");
@@ -21,6 +21,18 @@ navLinks.forEach((link) => {
   });
 });
 
+const btns = document.querySelectorAll(".btns button");
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btns.forEach((l) => {
+      l.classList.remove("active");
+    });
+
+    btn.classList.add("active");
+  });
+});
+
 const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
@@ -32,7 +44,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.15,
+    threshold: 0.5,
   },
 );
 
@@ -55,31 +67,6 @@ inputs.forEach((input) => {
       label.classList.remove("active");
       input.classList.remove("active");
     }
-  });
-});
-
-const magneticElements = Array.from(
-  document.querySelectorAll("a, .mode, form button"),
-);
-
-magneticElements.forEach((el) => {
-  el.classList.add("magnetic-element");
-
-  el.addEventListener("mousemove", (e) => {
-    const rect = el.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-
-    // Smooth magnetic pull
-    const pullX = x * 0.5;
-    const pullY = y * 0.5;
-
-    el.style.transform = `translate(${pullX}px, ${pullY}px) scale(1.05)`;
-  });
-
-  el.addEventListener("mouseleave", () => {
-    // Smooth reset
-    el.style.transform = "translate(0px, 0px) scale(1)";
   });
 });
 
