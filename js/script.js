@@ -15,6 +15,7 @@ navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.forEach((l) => {
       l.classList.remove("active");
+      nav.classList.remove("shown");
     });
 
     link.classList.add("active");

@@ -70,6 +70,11 @@ svg {
   transition-delay: 1.2s;
 }
 
+.click:active {
+  filter: blur(2px);
+  transform: scale(0.9);
+}
+
 :root {
   --bg: #0c0905;
   --bg-home: rgba(0, 0, 0, 0.716);
@@ -355,6 +360,24 @@ hr {
     flex: 1;
     min-width: 360px;
   }
+  .td-o {
+    transition-delay: 0.2s;
+  }
+  .td-tw {
+    transition-delay: 0.2s;
+  }
+  .td-th {
+    transition-delay: 0.2s;
+  }
+  .td-fo {
+    transition-delay: 0.2s;
+  }
+  .td-fi {
+    transition-delay: 0.2s;
+  }
+  .td-si {
+    transition-delay: 0.2s;
+  }
 }
 
 @media (max-width: 820px) {
@@ -509,24 +532,6 @@ hr {
   .links a {
     padding: 15px 20px;
     font-size: 10px;
-  }
-  .td-o {
-    transition-delay: 0.2s;
-  }
-  .td-tw {
-    transition-delay: 0.2s;
-  }
-  .td-th {
-    transition-delay: 0.2s;
-  }
-  .td-fo {
-    transition-delay: 0.2s;
-  }
-  .td-fi {
-    transition-delay: 0.2s;
-  }
-  .td-si {
-    transition-delay: 0.2s;
   }
   .rev-card {
     min-width: 200px !important;
