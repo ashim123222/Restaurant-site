@@ -5,7 +5,11 @@ section.why,
 section.review,
 section.contact {
   flex-direction: column;
-  gap: 5vh;
+  gap: 50px;
+}
+
+section.service {
+  background: var(--bg-home);
 }
 section.about .subtext {
   font-size: 14px;
@@ -19,24 +23,29 @@ section.about .subtext {
 .about-container .top {
   display: grid;
   grid-template-columns: 1fr 1.25fr;
-  gap: 7vw;
+  gap: 30px;
 }
 .top .right {
-  height: 100%;
+  height: 80%;
   width: 100%;
-  /* border-radius: 30px; */
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right .img {
+  width: 80% !important;
+  height: 90% !important;
 }
 .exp {
   position: absolute;
-  top: -2vw;
-  left: -2vw;
-  /* border-radius: 20px; */
-  padding: 2vw;
+  top: -5%;
+  left: 0%;
+  border-radius: 20px;
+  padding: 20px;
   border: 1px solid var(--glass-border);
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  box-shadow: -5px -5px 10px var(--gold-shadow);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 30px var(--bg-home);
 }
 .exp p:first-child {
   font-family: "Playfair Display", serif;
@@ -51,13 +60,14 @@ section.about .subtext {
 }
 .chef {
   position: absolute;
-  bottom: -2vw;
-  right: -2vw;
-  height: 50%;
-  width: 40%;
+  bottom: -10%;
+  right: 0%;
+  height: 60%;
+  width: 35%;
   overflow: hidden;
-  /* border-radius: 20px; */
-  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  corner-shape: bevel;
+  border: 1px solid var(--gold-text);
   box-shadow: 0 0 30px var(--gold-shadow);
 }
 .chef img {
@@ -91,12 +101,8 @@ section.about .subtext {
     height: 40%;
     width: 40%;
   }
-  .card-dish:hover {
-    box-shadow: 0 0 30px var(--gold-shadow);
-    transform: translateY(-20px) !important;
-    border: 1px solid var(--gold-border);
-  }
-  .card-dish:hover h5 {
+
+  .card-dish:hover h3 {
     color: var(--gold-text);
   }
 }
@@ -106,19 +112,13 @@ section.about .subtext {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 30px;
 }
 .top .left {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 3.9vw;
-  font-weight: 600;
-  /* margin-bottom: 1vw; */
-}
+
 .detail {
   font-size: 18px;
   letter-spacing: 1px;
@@ -133,6 +133,9 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: var(--card-bg);
+  width: 100vw;
+  padding: 3% 5%;
 }
 .quick > div {
   text-align: center;
@@ -141,6 +144,8 @@ h3 {
 .quick > div p:first-child {
   font-family: "Playfair Display", serif;
   font-size: 4vw;
+  font-weight: 600;
+  margin-bottom: 10px;
   text-shadow: 0 0 50px var(--gold-shadow);
 }
 .quick > div p:last-child {
@@ -172,6 +177,7 @@ h3 {
   background: var(--gold-bg);
   border: 1px solid var(--gold-border);
   color: var(--text-sec);
+  font-weight: 900;
 }
 .card-dish img {
   aspect-ratio: 16/10;
@@ -179,15 +185,14 @@ h3 {
 .menu-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2vw;
+  gap: 20px;
 }
 .card-dish,
 .card {
   border: 1px solid var(--glass-border);
-  /* border-radius: 20px; */
-  padding: 1rem;
+  border-radius: 20px;
   transition: 0.5s ease;
-  background: var(--bg-section);
+  background: var(--card-bg);
   position: relative;
   overflow: hidden;
 }
@@ -217,15 +222,17 @@ h3 {
 }
 .card-dish:hover img {
   transform: scale(1.2);
+  transform-origin: top;
 }
 .field {
   position: absolute;
   top: 10px;
   right: 10px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 10px;
+  letter-spacing: 1px;
   padding: 5px 12px;
-  /* border-radius: 2vw; */
+  border-radius: 20px;
   backdrop-filter: blur(2px);
   border: 1px solid var(--glass-border);
 }
@@ -236,25 +243,17 @@ h3 {
   background: rgba(212, 0, 0, 0.404);
 }
 .dish-detail {
-  padding-top: 2vw;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1vw;
+  gap: 16px;
   justify-content: space-between;
-}
-h5 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.5vw;
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-  transition: 0.5s ease;
 }
 
 .dish-detail .detail,
 .card .detail {
-  font-size: 14px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
 }
 
 .order {
@@ -264,7 +263,6 @@ h5 {
 }
 .order p {
   opacity: 0.8;
-  font-size: 14px;
 }
 .order a {
   text-transform: uppercase;
@@ -288,6 +286,8 @@ h5 {
   position: relative;
   /* border-radius: 20px; */
   overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid var(--glass-border);
 }
 
 .image img {
@@ -323,65 +323,23 @@ h5 {
   grid-template-columns: 1fr;
   gap: 15px;
 }
+.image:hover {
+  border-color: var(--gold-border);
+}
 .image:hover img {
   transform: scale(1.1);
-}
-.img-det {
-  position: absolute;
-  bottom: 0;
-  background: linear-gradient(transparent, var(--bg));
-  bottom: 0;
-  width: 100%;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  gap: 10px;
-  padding: 2vw;
-  padding-bottom: 1vw;
-  transition: 0.5s ease;
-}
-.img-det b {
-  font-family: "Playfair Display", serif;
-  text-transform: capitalize;
-  font-size: 1.2vw;
-  font-weight: 300;
-}
-.img-det p {
-  text-transform: uppercase;
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: var(--gold-text);
-  font-weight: 500;
 }
 
 @media (hover: hover) {
   .order a:hover {
     transform: scale(1.1);
   }
-  .img-det {
-    transform: translateY(200px);
-  }
-  .image:hover .img-det {
-    transform: translateY(0);
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px var(--gold-shadow);
-    border: 1px solid var(--gold-border);
-  }
-  .card:hover h4 {
+
+  .card:hover h3 {
     color: var(--gold-text);
   }
 }
 
-h4 {
-  text-transform: capitalize;
-  font-family: "Playfair Display", serif;
-  font-size: 1.7vw;
-  font-weight: 500;
-  transition: 0.5s ease;
-}
 .card {
   padding: 2rem;
 }
@@ -400,33 +358,27 @@ h4 {
   width: 100%;
   padding: 12px;
 }
-
-section.review, section.service {
-  background: var(--card-bg);
-}
-
-.reviews .rev-card {
+.rev-card {
   flex-direction: column;
   gap: 2rem;
-  max-width: 60vw;
+  min-width: 400px;
+  max-width: 1000px;
   text-align: center;
   padding: 4vw 7vw;
-  background: var(--bg-section);
+  background: var(--card-bg);
   border: 1px solid var(--glass-border);
+  border-top-color: var(--gold-border);
 }
 
 @font-face {
   font-family: ital;
-  src: url(../fonts/Italianno/Italianno-Regular.ttf);
+  src: url(../fonts/Tangerine-Regular.ttf);
 }
 
-@font-face {
-  font-family: dec;
-  src: url(../fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf);
-}
 .rev-ms {
   font-family: ital;
-  font-size: 3rem;
+  font-size: 4rem;
+  /* font-style: italic; */
 }
 .rev-name {
   flex-direction: column;
@@ -436,8 +388,6 @@ section.review, section.service {
 }
 .rev-name p:first-child {
   text-transform: uppercase;
-  font-family: "Playfair Display", serif;
-  /* font-weight: 500; */
   font-size: 12px;
   color: var(--gold-text);
   letter-spacing: 2px;
@@ -472,4 +422,67 @@ section.review, section.service {
 .rev-name::after {
   left: 0%;
   translate: -100% -50%;
+}
+.review {
+  overflow: hidden;
+}
+
+.reviews {
+  display: flex;
+  /* max-width: 1000px; */
+}
+.rev-card-cont {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rev-card {
+  /* flex-shrink: 0; */
+  min-width: 1000px;
+}
+
+.review {
+  overflow: hidden;
+}
+
+.reviews {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.rev-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+}
+
+@media (max-width: 900px) {
+  .rev-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  .rev-card {
+    flex: 0 0 100%;
+  }
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.control .center svg {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--glass-border);
+  background: var(--bg-icon);
+  cursor: pointer;
+  border-radius: 50%;
 }

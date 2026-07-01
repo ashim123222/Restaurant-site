@@ -40,11 +40,13 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
       }
     });
   },
   {
-    threshold: 0.5,
+    threshold: 0.15,
   },
 );
 
@@ -120,4 +122,122 @@ modeButton.addEventListener("click", (e) => {
   setTimeout(() => {
     transition.remove();
   }, 600);
+});
+
+const fields = document.querySelectorAll("input, textarea");
+
+fields.forEach((field) => {
+  const label = document.querySelector(`label[for="${field.id}"]`);
+
+  if (!label) return;
+
+  // Page load par agar value already hai
+  if (field.value.trim() !== "") {
+    label.classList.add("clicked");
+  }
+
+  // Click / Focus
+  field.addEventListener("focus", () => {
+    label.classList.add("clicked");
+  });
+
+  // Typing
+  field.addEventListener("input", () => {
+    if (field.value.trim() !== "") {
+      label.classList.add("clicked");
+    } else {
+      label.classList.remove("clicked");
+    }
+  });
+
+  // Focus hatne par check
+  field.addEventListener("blur", () => {
+    if (field.value.trim() === "") {
+      label.classList.remove("clicked");
+    }
+  });
+});
+
+const images = document.querySelectorAll(".gallery-contain img");
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
+
+images.forEach((image) => {
+  image.addEventListener("click", () => {
+    lightbox.classList.add("active");
+    lightboxImg.src = image.src;
+
+    document.body.style.overflow = "hidden";
+  });
+});
+
+// Close button
+closeBtn.addEventListener("click", closeLightbox);
+
+// Click outside image
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+// ESC key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeLightbox();
+  }
+});
+
+function closeLightbox() {
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+const hamburger = document.querySelector(".humberger");
+const nav = document.querySelector("nav");
+
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("shown");
+  hamburger.classList.toggle("shown");
+});
+
+document.addEventListener("click", (e) => {
+  if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+    nav.classList.remove("shown");
+    hamburger.classList.remove("shown");
+  }
+});
+
+const reviews = document.querySelector(".reviews");
+const cards = document.querySelectorAll(".rev-card-cont");
+
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+let index = 0;
+
+function updateSlider() {
+    reviews.style.transform = `translateX(-${index * 100}%)`;
+}
+
+nextBtn.addEventListener("click", () => {
+    index++;
+
+    if (index >= cards.length) {
+        index = 0; // Go back to first card
+    }
+
+    updateSlider();
+});
+
+prevBtn.addEventListener("click", () => {
+    index--;
+
+    if (index < 0) {
+        index = cards.length - 1; // Go to last card
+    }
+
+    updateSlider();
 });
