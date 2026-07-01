@@ -59,6 +59,7 @@ section.contact .container {
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  background: var(--card-bg);
 }
 .res-way p {
     opacity: 0.6;
@@ -95,6 +96,11 @@ section.contact .container {
     background: rgba(9, 56, 1, 0.451);
     border-color: rgba(0, 196, 0, 0.91);
 }
+body.light-theme .res-way a.whatsapp {
+  background: rgba(73, 255, 41, 0.215);
+  border-color: rgba(0, 196, 0, 0.811);
+  color: rgb(0, 187, 0);
+}
 .res-way a.email {
   background: rgba(103, 67, 0, 0.25);
   border-color: orange;
@@ -107,6 +113,11 @@ section.contact .container {
 .res-way a.email:hover {
     background: rgba(103, 67, 0, 0.35);
     border-color: orange;
+}
+body.light-theme .res-way a.email {
+  background: rgba(251, 171, 23, 0.149);
+  border-color: orange;
+  color: rgba(255, 166, 0, 0.797);
 }
 
 .reserve {

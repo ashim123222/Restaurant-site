@@ -17,6 +17,7 @@
   border: none;
   color: var(--text-pri);
   -webkit-tap-highlight-color: transparent;
+  list-style-type: none;
 }
 
 a,
@@ -71,12 +72,10 @@ svg {
 
 :root {
   --bg: #0c0905;
-  --bg-home: rgba(0, 0, 0, 0.616);
+  --bg-home: rgba(0, 0, 0, 0.716);
 
   --card-bg: radial-gradient(circle at 50% 10%, rgb(28, 15, 4), rgb(0, 0, 0));
   --bg-icon: radial-gradient(circle at 50% 0%, rgb(44, 24, 8), rgb(26, 15, 6));
-
-  /* --card-bg: linear-gradient(rgba(17, 17, 17, 0.408), rgb(11, 7, 2)); */
 
   --gold-bg: linear-gradient(90deg, #efc275, #b37b34);
   --gold-text: #febc4a;
@@ -92,41 +91,27 @@ svg {
 }
 
 body.light-theme {
-  --bg: #ffffff;
+  --bg: #faf7f2;
+  --bg-home: rgba(244, 241, 239, 0.82);
 
-  --bg-home: rgba(255, 255, 255, 0.92);
+  /* Cards */
+  --card-bg: radial-gradient(circle at 50% 0%, #ffffff, #ffffff);
+  --bg-icon: radial-gradient(circle at 50% 0%, #fff7ea, #f3e6d0);
 
-  --bg-section: radial-gradient(
-    circle at 50% 10%,
-    rgb(251, 244, 238),
-    rgb(248, 243, 241, 0.718)
-  );
+  /* Gold */
+  --gold-bg: linear-gradient(90deg, #d8a64c, #8c5d19);
+  --gold-text: #b27a23;
+  --gold-border: #c89b49;
+  --gold-shadow: rgba(184, 128, 33, 0.28);
 
-  --bg-icon: radial-gradient(
-    circle at 50% 0%,
-    rgb(255, 255, 255),
-    rgb(255, 255, 255)
-  );
+  /* Text */
+  --text-pri: #23201b;
+  --text-sec: #ffffff;
+  --text-muted: #5f5951;
 
-  --card-bg: linear-gradient(rgb(250, 246, 243), rgb(255, 255, 255));
-
-  --gold-bg: linear-gradient(90deg, #efc275, #b37b34);
-
-  --gold-text: #d68316;
-
-  --gold-border: #d4a256;
-
-  --gold-shadow: rgb(255, 209, 184);
-
-  --text-pri: rgb(33, 21, 5);
-
-  --text-sec: rgb(95, 78, 55);
-
-  --text-muted: rgba(80, 67, 52, 0.72);
-
-  --glass-bg: rgba(255, 255, 255, 0.58);
-
-  --glass-border: rgba(174, 127, 45, 0.22);
+  /* Glass Effect */
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(184, 147, 79, 0.22);
 }
 h2 {
   font-family: playfair;
@@ -504,7 +489,7 @@ hr {
 
 @media (max-width: 620px) {
   section {
-    padding: 15vh 10px;
+    padding: 10vh 10px;
   }
   nav {
     width: 100%;
@@ -518,8 +503,9 @@ hr {
     margin-bottom: 5vh;
   }
   h2 {
-    margin-bottom: 0;
+    font-size: 28px;
   }
+
   .links a {
     padding: 15px 20px;
     font-size: 10px;
