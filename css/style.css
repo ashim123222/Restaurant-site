@@ -41,7 +41,7 @@ section {
 .reveal {
   opacity: 0;
   transform: translateY(50px);
-  transition: 1s ease;
+  transition: 0.5s ease-in;
 }
 .reveal.active {
   opacity: 1;
@@ -361,22 +361,22 @@ hr {
     min-width: 360px;
   }
   .td-o {
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
   }
   .td-tw {
     transition-delay: 0.2s;
   }
   .td-th {
-    transition-delay: 0.2s;
+    transition-delay: 0.3s;
   }
   .td-fo {
-    transition-delay: 0.2s;
+    transition-delay: 0.4s;
   }
   .td-fi {
-    transition-delay: 0.2s;
+    transition-delay: 0.5s;
   }
   .td-si {
-    transition-delay: 0.2s;
+    transition-delay: 0.6s;
   }
 }
 

@@ -16,6 +16,8 @@ navLinks.forEach((link) => {
     navLinks.forEach((l) => {
       l.classList.remove("active");
       nav.classList.remove("shown");
+
+      hamburger.classList.remove("shown");
     });
 
     link.classList.add("active");
@@ -220,25 +222,36 @@ const prevBtn = document.querySelector(".prev");
 let index = 0;
 
 function updateSlider() {
-    reviews.style.transform = `translateX(-${index * 100}%)`;
+  reviews.style.transform = `translateX(-${index * 100}%)`;
 }
 
 nextBtn.addEventListener("click", () => {
-    index++;
+  index++;
 
-    if (index >= cards.length) {
-        index = 0; // Go back to first card
-    }
+  if (index >= cards.length) {
+    index = 0; // Go back to first card
+  }
 
-    updateSlider();
+  updateSlider();
 });
 
 prevBtn.addEventListener("click", () => {
-    index--;
+  index--;
 
-    if (index < 0) {
-        index = cards.length - 1; // Go to last card
-    }
+  if (index < 0) {
+    index = cards.length - 1; // Go to last card
+  }
 
-    updateSlider();
+  updateSlider();
+});
+
+const lenis = new Lenis({
+  duration: 1.8,
+  lerp: 0.05,
+  smoothWheel: true,
+  syncTouch: true,
+  wheelMultiplier: 0.7,
+  touchMultiplier: 1.5,
+  infinite: false,
+  autoRaf: true,
 });
