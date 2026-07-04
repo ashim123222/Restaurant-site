@@ -276,6 +276,13 @@ section.about .subtext {
   transition: 0.5s ease;
 }
 
+section.gallery {
+  background: var(--card-bg);
+}
+section.review {
+  background: var(--card-bg);
+}
+
 .gallery-contain {
   display: flex;
   flex-wrap: wrap;

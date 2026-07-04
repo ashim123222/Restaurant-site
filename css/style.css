@@ -34,14 +34,16 @@ body {
 section {
   padding: 10% 7%;
 }
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 .reveal {
   opacity: 0;
   transform: translateY(50px);
-  transition: 0.5s ease-in;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s linear;
 }
 .reveal.active {
   opacity: 1;
@@ -79,7 +81,12 @@ svg {
   --bg: #0c0905;
   --bg-home: rgba(0, 0, 0, 0.716);
 
-  --card-bg: radial-gradient(circle at 50% 10%, rgb(28, 15, 4), rgb(0, 0, 0));
+  --card-bg: radial-gradient(
+    circle at 20% 10%,
+    rgb(59, 31, 9),
+    rgb(0, 0, 0),
+    rgb(28, 15, 4)
+  );
   --bg-icon: radial-gradient(circle at 50% 0%, rgb(44, 24, 8), rgb(26, 15, 6));
 
   --gold-bg: linear-gradient(90deg, #efc275, #b37b34);
@@ -512,7 +519,7 @@ hr {
 
 @media (max-width: 620px) {
   section {
-    padding: 10vh 10px;
+    padding: 10vh 15px;
   }
   nav {
     width: 100%;
@@ -527,6 +534,9 @@ hr {
   }
   h2 {
     font-size: 28px;
+  }
+  section.service .links {
+    margin-top: 0px;
   }
 
   .links a {

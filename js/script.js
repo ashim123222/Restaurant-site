@@ -43,8 +43,6 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
-      } else {
-        entry.target.classList.remove("active");
       }
     });
   },
@@ -245,12 +243,20 @@ prevBtn.addEventListener("click", () => {
   updateSlider();
 });
 
+const btnsMenu = document.querySelectorAll(".menu-btn");
+
+btnsMenu.forEach((b)  => {
+  b.addEventListener("click", () => {
+    alert("Houjik haaplaktree menu do");
+  });
+});
+
 const lenis = new Lenis({
   duration: 1.8,
   lerp: 0.05,
   smoothWheel: true,
   syncTouch: true,
-  wheelMultiplier: 0.7,
+  wheelMultiplier: 0.8,
   touchMultiplier: 1.5,
   infinite: false,
   autoRaf: true,
