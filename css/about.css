@@ -171,6 +171,7 @@ section.about .subtext {
   letter-spacing: 2px;
   font-size: 11px;
   transition: 0.5s ease;
+  box-shadow: 0 0 30px var(--gold-shadow);
 }
 
 .btns button.active {
@@ -190,12 +191,14 @@ section.about .subtext {
 .card-dish,
 .card {
   border: 1px solid var(--glass-border);
-  border-radius: 20px;
+  /* border-radius: 20px; */
   transition: 0.5s ease;
   background: var(--card-bg);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 30px var(--gold-shadow);
 }
+
 .card-dish::before,
 .card::before {
   content: "";
@@ -373,8 +376,9 @@ section.review {
   text-align: center;
   padding: 4vw 7vw;
   background: var(--card-bg);
-  border: 1px solid var(--glass-border);
+  border: 2px solid var(--glass-border);
   border-top-color: var(--gold-border);
+  box-shadow: 0 0 30px var(--gold-shadow);
 }
 
 @font-face {

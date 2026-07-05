@@ -34,9 +34,9 @@ body {
 section {
   padding: 10% 7%;
 }
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 .reveal {
   opacity: 0;
@@ -92,7 +92,7 @@ svg {
   --gold-bg: linear-gradient(90deg, #efc275, #b37b34);
   --gold-text: #febc4a;
   --gold-border: #9f7429df;
-  --gold-shadow: #7e56119d;
+  --gold-shadow: #000000;
 
   --text-pri: rgb(206, 206, 206);
   --text-sec: rgb(27, 26, 26);
@@ -107,14 +107,19 @@ body.light-theme {
   --bg-home: rgba(244, 241, 239, 0.82);
 
   /* Cards */
-  --card-bg: radial-gradient(circle at 50% 0%, #ffffff, #ffffff);
+  --card-bg: radial-gradient(
+    circle at 20% 10%,
+    rgb(243, 213, 192),
+    rgb(255, 255, 255),
+    rgb(254, 230, 210)
+  );
   --bg-icon: radial-gradient(circle at 50% 0%, #fff7ea, #f3e6d0);
 
   /* Gold */
   --gold-bg: linear-gradient(90deg, #d8a64c, #8c5d19);
   --gold-text: #b27a23;
   --gold-border: #c89b49;
-  --gold-shadow: rgba(184, 128, 33, 0.28);
+  --gold-shadow: rgba(0, 0, 0, 0.119);
 
   /* Text */
   --text-pri: #23201b;
@@ -395,25 +400,27 @@ hr {
   nav {
     position: absolute;
     z-index: -1;
-    right: -100%;
+    right: -101%;
     top: 110%;
     translate: -0% -0%;
-    transition: 0.25s ease;
     background: var(--card-bg);
     flex-direction: column;
     gap: 20px;
     padding: 50px;
     width: 40%;
     height: calc(100vh - 50%);
+    transition: 0.5s ease !important;
+    border-radius: 20px;
+    filter: blur(2px);
   }
   nav a {
     padding: 10px 20px;
     font-size: 14px;
   }
   nav.shown {
-    border-radius: 20px;
+    filter: blur(0px);
     right: 0;
-    top: 110%;
+    top: 100%;
     translate: -0% 0%;
   }
   .humberger {

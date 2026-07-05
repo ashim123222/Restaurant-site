@@ -43,9 +43,9 @@ nav {
 nav a {
   text-transform: uppercase;
   padding: 4px 20px;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 2px;
-  font-weight: 700;
+  font-weight: 600;
   position: relative;
   transition: 0.5s ease;
 }
