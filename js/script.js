@@ -245,19 +245,22 @@ prevBtn.addEventListener("click", () => {
 
 const btnsMenu = document.querySelectorAll(".menu-btn");
 
-btnsMenu.forEach((b)  => {
+btnsMenu.forEach((b) => {
   b.addEventListener("click", () => {
     alert("Houjik haaplaktree menu do");
   });
 });
 
-const lenis = new Lenis({
-  duration: 1.8,
-  lerp: 0.05,
-  smoothWheel: true,
-  syncTouch: true,
-  wheelMultiplier: 0.8,
-  touchMultiplier: 1.5,
-  infinite: false,
-  autoRaf: true,
-});
+const isDesktop =
+  window.innerWidth >= 1024 &&
+  !("ontouchstart" in window) &&
+  navigator.maxTouchPoints === 0;
+
+if (isDesktop) {
+  const lenis = new Lenis({
+    duration: 1.6,
+    lerp: 0.08,
+    smoothWheel: true,
+    autoRaf: true,
+  });
+}
