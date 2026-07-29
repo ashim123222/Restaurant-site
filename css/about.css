@@ -191,7 +191,7 @@ section.about .subtext {
 .card-dish,
 .card {
   border: 1px solid var(--glass-border);
-  /* border-radius: 20px; */
+  border-radius: 20px;
   transition: 0.5s ease;
   background: var(--card-bg);
   position: relative;
@@ -279,11 +279,14 @@ section.about .subtext {
   transition: 0.5s ease;
 }
 
-section.gallery {
+/* section.gallery {
   background: var(--card-bg);
+} */
+section.contact {
+  background: var(--card-bg) ;
 }
 section.review {
-  background: var(--card-bg);
+  background: var(--bg-home);
 }
 
 .gallery-contain {
@@ -376,9 +379,10 @@ section.review {
   text-align: center;
   padding: 4vw 7vw;
   background: var(--card-bg);
-  border: 2px solid var(--glass-border);
-  border-top-color: var(--gold-border);
-  box-shadow: 0 0 30px var(--gold-shadow);
+  /* border: 1px solid var(--glass-border); */
+  /* border-top-color: var(--gold-border); */
+  box-shadow: 0 0 30px var(--gold-shadow), inset 0 0 2px var(--glass-border);
+  border-radius: 20px;
 }
 
 @font-face {
@@ -492,7 +496,8 @@ section.review {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--glass-border);
+  /* border: 1px solid var(--glass-border); */
+  box-shadow: 0 0 30px var(--gold-shadow), inset 0 0 2px var(--gold-border);
   background: var(--bg-icon);
   cursor: pointer;
   border-radius: 50%;

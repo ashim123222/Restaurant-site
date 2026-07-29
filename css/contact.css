@@ -1,5 +1,5 @@
 section.contact {
-  background: var(--bg-home);
+  background: var(--glass-bg);
 }
 
 body.light-theme section.contact {
@@ -28,6 +28,7 @@ section.contact .container {
   display: flex;
   align-items: start;
   gap: 20px;
+  border-radius: 20px;
 }
 
 .reach-container > div svg {
@@ -65,6 +66,7 @@ section.contact .container {
   gap: 10px;
   align-items: center;
   background: var(--card-bg);
+  border-radius: 20px;
 }
 .res-way p {
     opacity: 0.6;
@@ -134,7 +136,7 @@ body.light-theme .res-way a.email {
   gap: 20px;
   padding: 30px;
   box-shadow: 0 0 30px var(--gold-shadow);
-  /* border-radius: 20px; */
+  border-radius: 20px;
   background: var(--card-bg);
 }
 form {
